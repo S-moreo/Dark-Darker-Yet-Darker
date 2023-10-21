@@ -2,6 +2,7 @@ package net.smoreo.ddyd;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.smoreo.ddyd.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +12,8 @@ public class DDYD implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		ModItems.registerModItems();
 
 	}
 }
