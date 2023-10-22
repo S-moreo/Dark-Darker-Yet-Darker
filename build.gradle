@@ -16,6 +16,14 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven {
+		name = 'GeckoLib'
+		url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+	}
+	maven {
+		name "KosmX's maven"
+		url 'https://maven.kosmx.dev/'
+	}
 }
 
 loom {
@@ -43,6 +51,10 @@ dependencies {
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
+
+	//My own dependencies:
+	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.19:3.1.40'
+	include modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:1.0.2")
 }
 
 processResources {
